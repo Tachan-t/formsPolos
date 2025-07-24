@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro de Polo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form id="myForm">
+        <div class="form-header">
+            <div class="logo-container">
+            </div>
+        </div>
+        
+        <div class="intro-section">
+            <p>Este formulário deverá ser preenchido por todos os polos parceiros que desejam comercializar os cursos da modalidade semipresencial.</p>
+            <p class="important-note">O não preenchimento do formulário (que deverá ser renovado anualmente) ou o não atendimento das normas estabelecidas para o desenvolvimento dos laboratórios implicará em restrição da oferta do curso.</p>
+            <p>Após a liberação do espaço físico, para receber os insumos e capacitação de tutores para aulas práticas, os polos devem ter, no mínimo, 20 alunos matriculados no mesmo semestre para iniciar uma turma.</p>
+            <p>A indicação de tutores é atribuição dos polos e a não indicação dentro do prazo estipulado implicará na não realização das aulas.</p>
+
+            <fieldset>
+                <legend>Infraestrutura Mínima para Aulas Práticas</legend>
+                
+                <label for="selecionarCurso">Selecione o Curso para visualizar a Infraestrutura Mínima:</label>
+                <select id="selecionarCurso" name="Curso Selecionado">
+                    <option value="">Selecione o Curso</option> <option value="biomedicina">Biomedicina</option>
+                    <option value="educacaoFisica">Educação Física</option> <option value="farmacia">Farmácia</option>
+                    <option value="nutricao">Nutrição</option>
+                    <option value="radiologia">Radiologia</option>
+                    <option value="esteticaCosmetica">Estética e Cosmética</option> <option value="fisioterapia">Fisioterapia</option>
+                    <option value="terapiaOcupacional">Terapia Ocupacional</option> </select>
+
+                <div id="semestreEquipamentosContainer" style="display: none; margin-top: 20px;">
+                    <label for="selecionarSemestre">Selecione o Semestre:</label>
+                    <select id="selecionarSemestre" name="Semestre Selecionado">
+                        <option value="">Selecione o Semestre</option> </select>
+
+                    <div id="equipamentosListaContainer" style="display: none; margin-top: 20px;">
+                        </div>
+                </div>
+                
+                <p style="margin-top: 25px;">Ao preencher esse formulário, o polo está ciente de que a infraestrutura mínima para a realização da aulas práticas do curso selecionado, compreende:</p>
+
+                <div id="listaBiomedicina" class="lista-requisitos" style="display: none;">
+                    <details>
+                        <summary>Visualizar Lista Completa de Requisitos de Infraestrutura para Biomedicina</summary>
+                        <ol>
+                            <li>Laboratório Multidisciplinar</li>
+                            <li>Laboratório de anatomia</li>
+                            <li>Laboratório de Química</li>
+                            <li>Laboratório de Química Geral ou Laboratório Multidisciplinar com Infraestrutura para Química</li>
+                            <li>Laboratório de Química Orgânica ou Geral</li>
+                            <li>Laboratório de microscopia</li>
+                            <li>Laboratório Multidisciplinar ou de Análises Clínicas</li>
+                            <li>Laboratório de Microbiologia</li>
+                            <li>Laboratório de Informática</li>
+                            <li>Laboratório de Hematologia ou Análises Clínicas</li>
+                            <li>Laboratório de Análises Físico-Químicas ou Controle de Qualidade Farmacêutico</li>
+                            <li>Laboratório de Parasitologia ou Multidisciplinar</li>
+                            <li>Laboratório de Microbiologia, Análises Clínicas ou Multidisciplinar</li>
+                            <li>Laboratório de Análises Clínicas, Bioquímica Clínica ou Multidisciplinar</li>
+                            <li>Laboratório de estética</li>
+                            <li>Laboratório de Análise de Alimentos ou Laboratório de Química Analítica</li>
+                            <li>Laboratório de informática aplicada às ciências biomédicas ou de bioinformática.</li>
+                            <li>Laboratório de Tecnologia Cosmética.</li>
+                        </ol>
+                    </details>
+                </div>
+
+                <div id="listaFarmacia" class="lista-requisitos" style="display: none;">
+                    <details>
+                        <summary>Visualizar Lista Completa de Requisitos de Infraestrutura para Farmácia</summary>
+                        <ol>
+                            <li>Laboratório Multidisciplinar</li>
+                            <li>Laboratório de microscopia.</li>
+                            <li>Laboratório multiprofissional.</li>
+                            <li>Laboratório de Análises Físico-Químicas ou Controle de Qualidade Farmacêutico</li>
+                            <li>Laboratório de Análise de Alimentos ou Laboratório de Química Analítica.</li>
+                        </ol>
+                    </details>
+                </div>
+
+                <div id="listaNutricao" class="lista-requisitos" style="display: none;">
+                    <details>
+                        <summary>Visualizar Lista Completa de Requisitos de Infraestrutura para Nutrição</summary>
+                        <ol>
+                            <li>Laboratório de informática com acesso à internet</li>
+                            <li>Laboratório multidisciplinar com bancadas equipadas</li>
+                            <li>Pias e área de lavagem.</li>
+                            <li>Espaço seguro para manuseio biológico.</li>
+                            <li>Área de microscopia com iluminação adequada</li>
+                            <li>Laboratório multidisciplinar com projetor e espaço para trabalhos em grupo.</li>
+                            <li>Sala de ginástica ampla, limpa e ventilada, com espaço para montagem de estações.</li>
+                            <li>Biblioteca com materiais de referência em nutrição.</li>
+                            <li>Capacidade para demonstrar técnicas de preparo de alimentos saudáveis.</li>
+                            <li>Ambiente limpo e organizado, seguindo normas de higiene alimentar.</li>
+                        </ol>
+                    </details>
+                </div>
+
+                <div id="listaRadiologia" class="lista-requisitos" style="display: none;">
+                    <details>
+                        <summary>Visualizar Lista Completa de Requisitos de Infraestrutura para Radiologia</summary>
+                        <ol>
+                            <li>Sala de exames com simuladores de equipamentos de radiologia (raio-X, tomografia, ressonância).</li>
+                            <li>Modelos anatômicos para posicionamento radiográfico.</li>
+                            <li>Equipamentos de proteção individual (EPIs) contra radiação (aventais plumbíferos, óculos).</li>
+                            <li>Negatoscópio ou tela de alta resolução para visualização de imagens.</li>
+                            <li>Software de processamento e análise de imagens radiológicas.</li>
+                            <li>Materiais para treinamento de biossegurança em ambiente radiológico.</li>
+                            <li>Salas de aula com recursos audiovisuais para teoria.</li>
+                        </ol>
+                    </details>
+                </div>
+
+                <div id="listaEducacaoFisica" class="lista-requisitos" style="display: none;">
+                    <details>
+                        <summary>Visualizar Lista Completa de Requisitos de Infraestrutura para Educação Física</summary>
+                        <ol>
+                            <li>Espaço amplo para atividades práticas (quadra, salão, área ao ar livre).</li>
+                            <li>Equipamentos para diversas modalidades esportivas (bolas, cones, cordas).</li>
+                            <li>Materiais para avaliação física (balança, estadiômetro, cronômetros, flexímetro).</li>
+                            <li>Espelho para correção de postura e movimento.</li>
+                            <li>Kit de primeiros socorros.</li>
+                            <li>Ambiente com ventilação e iluminação adequadas.</li>
+                            <li>Recursos audiovisuais para demonstrações e aulas teóricas.</li>
+                        </ol>
+                    </details>
+                </div>
+
+                <div id="listaFisioterapia" class="lista-requisitos" style="display: none;">
+                    <details>
+                        <summary>Visualizar Lista Completa de Requisitos de Infraestrutura para Fisioterapia</summary>
+                        <ol>
+                            <li>Laboratório de cinesioterapia com macas, espelhos e barras paralelas.</li>
+                            <li>Equipamentos para eletroterapia (TENS, FES, ultrassom).</li>
+                            <li>Equipamentos para termoterapia (infravermelho, bolsas térmicas).</li>
+                            <li>Materiais para exercícios terapêuticos (bolas suíças, faixas elásticas, pesos).</li>
+                            <li>Modelos anatômicos para estudo da biomecânica.</li>
+                            <li>Caminhada assistida e simuladores de marcha.</li>
+                            <li>Mesa de Bobath (se aplicável).</li>
+                            <li>Esterilizador para equipamentos.</li>
+                            <li>Kit de primeiros socorros.</li>
+                        </ol>
+                    </details>
+                </div>
+
+                <div id="listaTerapiaOcupacional" class="lista-requisitos" style="display: none;">
+                    <details>
+                        <summary>Visualizar Lista Completa de Requisitos de Infraestrutura para Terapia Ocupacional</summary>
+                        <ol>
+                            <li>Sala de atividades terapêuticas equipada com mobiliário adaptado.</li>
+                            <li>Materiais para atividades manuais e artesanais (argila, tintas, tecidos).</li>
+                            <li>Jogos e brinquedos terapêuticos.</li>
+                            <li>Equipamentos para treinamento de atividades de vida diária (AVDs).</li>
+                            <li>Materiais para estimulação sensorial.</li>
+                            <li>Recursos para adaptação de ambientes.</li>
+                            <li>Equipamentos para avaliação da função motora e cognitiva.</li>
+                            <li>Modelos anatômicos e esqueletos.</li>
+                            <li>Kit de primeiros socorros.</li>
+                        </ol>
+                    </details>
+                </div>
+                
+                <p class="attention-note"><strong>Atenção:</strong> Não serão aceitos espaços de cozinha, espaços com cortinas, sofás ou com outros materiais que possam levar ao risco de contaminação cruzada. As fotos precisam demonstrar um espaço apto para receber 10 alunos (no mínimo) e atender todos os requisitos acima citados.</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações Pós-Preenchimento</legend>
+                <p>Após o preenchimento do formulário, o comprovante de preenchimento deverá ser encaminhado para o e-mail <strong>juliana.sanchez@fecaf.com.br</strong>. O prazo para liberação do polo é de 10 dias úteis.</p>
+            </fieldset>
+        </div>
+
+        <fieldset class="modern-fieldset">
+            <legend>Seleção de Polo</legend>
+            <label for="selecionarPolo">Selecione o Polo:</label>
+            <select id="selecionarPolo" name="Polo Selecionado" required>
+                <option value="">Carregando polos...</option>
+            </select>
+            <p id="carregandoPolos" style="color: #0056b3; font-weight: bold; margin-top: 10px;">Carregando dados dos polos, por favor aguarde...</p>
+            <p id="erroCarregamentoPolos" style="color: #d9534f; font-weight: bold; margin-top: 10px; display: none;">Erro ao carregar polos. Por favor, tente novamente mais tarde.</p>
+        </fieldset>
+
+        <fieldset class="modern-fieldset">
+            <legend>Informações de Contato</legend>
+
+            <div class="input-group">
+                <label for="Email">Email (Polo):</label>
+                <input type="email" id="Email" name="Email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Nome_do_Responsavel_pelo_Polo">Nome do Responsável pelo Polo:</label>
+                <input type="text" id="Nome_do_Responsavel_pelo_Polo" name="Nome do Responsavel pelo Polo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Telefone_do_Responsavel_pelo_Polo">Telefone do Responsavel pelo Polo (com DDD):</label>
+                <input type="text" id="Telefone_do_Responsavel_pelo_Polo" name="Telefone do Responsavel pelo Polo" placeholder="(XX) XXXXX-XXXX" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Email_do_Responsavel_pelo_Polo">Email do Responsavel pelo Polo:</label>
+                <input type="email" id="Email_do_Responsavel_pelo_Polo" name="Email do Responsavel pelo Polo" required>
+            </div>
+        </fieldset>
+
+        <fieldset class="modern-fieldset">
+            <legend>Dados do Polo</legend>
+
+            <div class="input-group">
+                <label for="Nome_e_Numero_do_Polo">Você é responsável por qual polo? (Ex: AM - Novo Aripoanã (388))</label>
+                <input type="text" id="Nome_e_Numero_do_Polo" name="Nome e Numero do Polo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="CNPJ_do_Polo">Qual o CNPJ do polo?</label>
+                <input type="text" id="CNPJ_do_Polo" name="CNPJ do Polo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Endereco_do_Polo">Qual o endereço completo do polo? (Importante para entrega de materiais)</label>
+                <textarea id="Endereco_do_Polo" name="Endereco do Polo" rows="3" required></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset class="modern-fieldset">
+            <legend>Estrutura para Aulas</legend>
+
+            <p>Você utilizará estrutura própria para realização das aulas ou fará aula em parceria com estabelecimentos de saúde?</p>
+            <div class="radio-group">
+                <input type="radio" id="estruturaPropria" name="Estrutura ou Parceria" value="Estrutura Propria" required>
+                <label for="estruturaPropria">Vou utilizar estrutura própria</label><br>
+
+                <input type="radio" id="estruturaParceria" name="Estrutura ou Parceria" value="Parceria com Estabelecimento de Saude">
+                <label for="estruturaParceria">Farei aula em parceria com estabelecimentos de saúde</label>
+            </div>
+
+            <div id="parceriaFields" style="display: none; margin-top: 20px;">
+                <div class="input-group">
+                    <label for="Link_Contrato_de_Parceria">Se você assinalou "parceria", por favor, adicione o LINK do contrato de parceria (ex: link do Google Drive/Dropbox):</label>
+                    <input type="url" id="Link_Contrato_de_Parceria" name="Link Contrato de Parceria" placeholder="https://exemplo.com/contrato.pdf">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="Link_Foto_Video_Laboratorio_1">Adicione o LINK da Foto/Vídeo do laboratório (URL 1):</label>
+                <input type="url" id="Link_Foto_Video_Laboratorio_1" name="Link Foto Video Laboratorio 1" placeholder="https://exemplo.com/foto1.jpg" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Link_Foto_Video_Laboratorio_2">Adicione o LINK da Foto/Vídeo do laboratório (URL 2):</label>
+                <input type="url" id="Link_Foto_Video_Laboratorio_2" name="Link Foto Video Laboratorio 2" placeholder="https://exemplo.com/foto2.jpg">
+            </div>
+        </fieldset>
+
+        <fieldset class="modern-fieldset">
+            <legend>Confirmações Finais</legend>
+            <p>Estou ciente de para finalização deste processo devo encaminhar um print da confirmação do envio do formulário para <strong>cristiane.andrade@fecaf.com.br</strong> informando sobre o preenchimento do formulário. O prazo para nossa devolutiva é 10 dias úteis.</p>
+
+            <label class="checkbox-container">
+                <input type="checkbox" id="Ciente_Confirmacao_Email_Cristiane" name="Ciente Confirmacao Email Cristiane" value="Sim" required>
+                Estou ciente.
+                <span class="checkmark"></span>
+            </label>
+        </fieldset>
+
+        <button type="submit" class="modern-button">Enviar Cadastro do Polo</button>
+    </form>
+
+    <div id="feedbackMessage"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
