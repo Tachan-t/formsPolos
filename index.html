@@ -46,6 +46,37 @@
                 <p class="attention-note"><strong>Atenção:</strong> Não serão aceitos espaços de cozinha, espaços com cortinas, sofás ou com outros materiais que possam levar ao risco de contaminação cruzada. As fotos precisam demonstrar um espaço apto para receber 10 alunos (no mínimo) e atender todos os requisitos acima citados.</p>
             </fieldset>
 
+        <fieldset class="modern-fieldset">
+            <legend>Estrutura para Aulas</legend>
+
+            <p>Você utilizará estrutura própria para realização das aulas ou fará aula em parceria com estabelecimentos de saúde?</p>
+            <div class="radio-group">
+                <input type="radio" id="estruturaPropria" name="Estrutura ou Parceria" value="Estrutura Propria" required>
+                <label for="estruturaPropria">Vou utilizar estrutura própria</label><br>
+
+                <input type="radio" id="estruturaParceria" name="Estrutura ou Parceria" value="Parceria com Estabelecimento de Saude">
+                <label for="estruturaParceria">Farei aula em parceria com estabelecimentos de saúde</label>
+            </div>
+
+            <div id="parceriaFields" style="display: none; margin-top: 20px;">
+                <div class="input-group">
+                    <label for="Link_Contrato_de_Parceria">Se você assinalou "parceria", por favor, adicione o LINK do contrato de parceria (ex: link do Google Drive/Dropbox):</label>
+                    <input type="url" id="Link_Contrato_de_Parceria" name="Link Contrato de Parceria" placeholder="https://exemplo.com/contrato.pdf">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="Link_Foto_Video_Laboratorio_1">Adicione o LINK da Foto/Vídeo do laboratório (URL 1):</label>
+                <input type="url" id="Link_Foto_Video_Laboratorio_1" name="Link Foto Video Laboratorio 1" placeholder="https://exemplo.com/foto1.jpg" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Link_Foto_Video_Laboratorio_2">Adicione o LINK da Foto/Vídeo do laboratório (URL 2):</label>
+                <input type="url" id="Link_Foto_Video_Laboratorio_2" name="Link Foto Video Laboratorio 2" placeholder="https://exemplo.com/foto2.jpg">
+            </div>
+        </fieldset>
+
+
             <fieldset>
                 <legend>Informações Pós-Preenchimento</legend>
                 <p>Após o preenchimento do formulário, o comprovante de preenchimento deverá ser encaminhado para o e-mail <strong>juliana.sanchez@fecaf.com.br</strong>. O prazo para liberação do polo é de 10 dias úteis.</p>
@@ -105,35 +136,7 @@
             </div>
         </fieldset>
 
-        <fieldset class="modern-fieldset">
-            <legend>Estrutura para Aulas</legend>
 
-            <p>Você utilizará estrutura própria para realização das aulas ou fará aula em parceria com estabelecimentos de saúde?</p>
-            <div class="radio-group">
-                <input type="radio" id="estruturaPropria" name="Estrutura ou Parceria" value="Estrutura Propria" required>
-                <label for="estruturaPropria">Vou utilizar estrutura própria</label><br>
-
-                <input type="radio" id="estruturaParceria" name="Estrutura ou Parceria" value="Parceria com Estabelecimento de Saude">
-                <label for="estruturaParceria">Farei aula em parceria com estabelecimentos de saúde</label>
-            </div>
-
-            <div id="parceriaFields" style="display: none; margin-top: 20px;">
-                <div class="input-group">
-                    <label for="Link_Contrato_de_Parceria">Se você assinalou "parceria", por favor, adicione o LINK do contrato de parceria (ex: link do Google Drive/Dropbox):</label>
-                    <input type="url" id="Link_Contrato_de_Parceria" name="Link Contrato de Parceria" placeholder="https://exemplo.com/contrato.pdf">
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label for="Link_Foto_Video_Laboratorio_1">Adicione o LINK da Foto/Vídeo do laboratório (URL 1):</label>
-                <input type="url" id="Link_Foto_Video_Laboratorio_1" name="Link Foto Video Laboratorio 1" placeholder="https://exemplo.com/foto1.jpg" required>
-            </div>
-
-            <div class="input-group">
-                <label for="Link_Foto_Video_Laboratorio_2">Adicione o LINK da Foto/Vídeo do laboratório (URL 2):</label>
-                <input type="url" id="Link_Foto_Video_Laboratorio_2" name="Link Foto Video Laboratorio 2" placeholder="https://exemplo.com/foto2.jpg">
-            </div>
-        </fieldset>
 
         <fieldset class="modern-fieldset">
             <legend>Confirmações Finais</legend>
