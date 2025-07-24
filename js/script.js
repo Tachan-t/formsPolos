@@ -270,16 +270,63 @@ const listasEquipamentosPorCursoESemestre = {
            "2 Cartazes anatômicos"
         ],
         '3_semestre': [
-            
+            "5  Goniômetros",
+            "5 Relógios analógicos",
+            "2 Dispositivos de monitorização de sinais vitais(Oximetro)",
+            "5 Crinômetros",
+            "2 Pesos (kit com 2 pesinhos)"
         ],
         '4_semestre': [
+            "5 Arcos",
+            "5 Dinamômetro",
+            "5 Bolas Bobath",
+            "5 Cones"
+        ],
+        '5_semestre': [
+            "2 Tesouras",
+            "10 Tecidos",
+            "10 Almofadas",
+            "5 Potes com aromas",
+            "5 Elementos visuais",
+            "5 Elementos auditivos",
+        ],
+        '6_semestre': [
+            "10 Fita metríca"
+        ],
+        '7_semestre': [
+            "Não há requisitos específicos para o 7º semestre"
+        ],
+        '8_semestre': [
+            "10 Bolas de borracha macia",
+            "1 Lenços",
+            "1 Toalhas Kit com 10"
         ],
     },
         esteticaCosmetica: {
         '1_semestre': [
-            "Sala de atividades terapêuticas equipada com mobiliário adaptado",
-            "Materiais para atividades manuais e artesanais (argila, tintas, tecidos)",
-            "Jogos e brinquedos terapêuticos"
+            "1 Dispenser de álcool 70%",
+            "1 Espelho de bancada ou de parede",
+            "1 Lixeira de Inox",
+        ],
+        '2_semestre': [
+            "1 Balanças antropométricas",
+            "2 Adipômetros",
+            "1 Glicosímetro digital"
+        ],
+        '3_semestre': [
+            "2 Conjunto de ventosas de silicone",
+        ],
+        '4_semestre': [
+            "Não há requisitos específicos para o 4º semestre"
+        ],
+        "5_semestre": [
+            "5 Rollers para microagulhamento",
+            "1 Vaporizadores de ozônio",
+            "1 Lupa com Luz de Led",
+            "1 Alta Frequência",
+            "1 Aparelho de TENS (Estimulação Elétrica Nervosa Transcutânea)",
+            "1 Aparelho de Microcorrente",
+            "1 Aparelho de Ultrassom"
         ],
     }
 };
