@@ -206,7 +206,7 @@ const listasEquipamentosPorCursoESemestre = {
         ],
         '5_semestre': [
             "7 Bolas de futsal",
-            "2 BOlas de futebol",
+            "2 Bolas de futebol",
             "2 kit com 10 Colchonetes",
             "2 Kit medicine balls",
             "3 Faixas Elásticas"
@@ -270,7 +270,7 @@ const listasEquipamentosPorCursoESemestre = {
            "2 Cartazes anatômicos"
         ],
         '3_semestre': [
-            "5  Goniômetros",
+            "5 Goniômetros",
             "5 Relógios analógicos",
             "2 Dispositivos de monitorização de sinais vitais(Oximetro)",
             "5 Crinômetros",
