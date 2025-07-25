@@ -19,9 +19,11 @@ let listaPolos = []; // Para armazenar os dados dos polos da API
 const mapeamentoCampos = {
     'Email': 'pol_email', 
     'Nome do Responsavel pelo Polo': 'pol_coordinator_name', 
-    'Telefone do Responsavel pelo Polo': 'pol_phone_number', 
+    'Telefone do Responsavel pelo Polo': 'pol_coordinator_phone_number', // A chave correta é 'pol_coordinator_phone_number'
     'Email do Responsavel pelo Polo': 'pol_coordinator_email', 
     'Nome e Numero do Polo': 'pol_name', 
+    // A chave correta para o CEP é 'pol_postal_code'
+    'CEP do Polo': 'pol_postal_code', 
     'CNPJ do Polo': 'pol_cnpj', 
     'Endereco do Polo': 'pol_address' 
 };
@@ -568,39 +570,49 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     carregarPolos();
 
-    // --- Lógica de pré-preenchimento ao selecionar um polo ---
-    selectPolo.addEventListener('change', function() {
-        const poloIdSelecionado = this.value;
-        const poloSelecionado = listaPolos.find(polo => polo.pol_mentor_id_reference == poloIdSelecionado);
+// --- Lógica de pré-preenchimento ao selecionar um polo ---
+selectPolo.addEventListener('change', function() {
+    const poloIdSelecionado = this.value;
+    const poloSelecionado = listaPolos.find(polo => polo.pol_mentor_id_reference == poloIdSelecionado);
 
-        if (poloSelecionado) {
-            console.log('Polo selecionado para preencher:', poloSelecionado); 
+    if (poloSelecionado) {
+        console.log('Polo selecionado para preencher:', poloSelecionado); 
 
-            document.getElementById('Email').value = poloSelecionado[mapeamentoCampos['Email']] || '';
-            document.getElementById('Nome_do_Responsavel_pelo_Polo').value = poloSelecionado[mapeamentoCampos['Nome do Responsavel pelo Polo']] || '';
-            document.getElementById('Telefone_do_Responsavel_pelo_Polo').value = poloSelecionado[mapeamentoCampos['Telefone do Responsavel pelo Polo']] || '';
-            document.getElementById('Email_do_Responsavel_pelo_Polo').value = poloSelecionado[mapeamentoCampos['Email do Responsavel pelo Polo']] || '';
-            document.getElementById('Nome_e_Numero_do_Polo').value = poloSelecionado[mapeamentoCampos['Nome e Numero do Polo']] || '';
-            document.getElementById('CNPJ_do_Polo').value = poloSelecionado[mapeamentoCampos['CNPJ do Polo']] || '';
-            
-            let enderecoCompleto = poloSelecionado[mapeamentoCampos['Endereco do Polo']] || '';
-            if (poloSelecionado.pol_address_complement) { 
-                enderecoCompleto += ', ' + poloSelecionado.pol_address_complement;
-            }
-            if (poloSelecionado.pol_district) { 
-                enderecoCompleto += ' - ' + poloSelecionado.pol_district;
-            }
-            document.getElementById('Endereco_do_Polo').value = enderecoCompleto;
-        } else {
-            document.getElementById('Email').value = '';
-            document.getElementById('Nome_do_Responsavel_pelo_Polo').value = '';
-            document.getElementById('Telefone_do_Responsavel_pelo_Polo').value = '';
-            document.getElementById('Email_do_Responsavel_pelo_Polo').value = '';
-            document.getElementById('Nome_e_Numero_do_Polo').value = '';
-            document.getElementById('CNPJ_do_Polo').value = '';
-            document.getElementById('Endereco_do_Polo').value = '';
+        document.getElementById('Email').value = poloSelecionado[mapeamentoCampos['Email']] || '';
+        document.getElementById('Nome_do_Responsavel_pelo_Polo').value = poloSelecionado[mapeamentoCampos['Nome do Responsavel pelo Polo']] || '';
+        document.getElementById('Telefone_do_Responsavel_pelo_Polo').value = poloSelecionado[mapeamentoCampos['Telefone do Responsavel pelo Polo']] || '';
+        document.getElementById('Email_do_Responsavel_pelo_Polo').value = poloSelecionado[mapeamentoCampos['Email do Responsavel pelo Polo']] || '';
+        document.getElementById('Nome_e_Numero_do_Polo').value = poloSelecionado[mapeamentoCampos['Nome e Numero do Polo']] || '';
+        // Preenche o campo de CEP com a chave correta da API
+        document.getElementById('CEP_do_Polo').value = poloSelecionado[mapeamentoCampos['CEP do Polo']] || '';
+        document.getElementById('CNPJ_do_Polo').value = poloSelecionado[mapeamentoCampos['CNPJ do Polo']] || '';
+        
+        let enderecoCompleto = poloSelecionado[mapeamentoCampos['Endereco do Polo']] || '';
+        // Constrói o endereço completo de forma mais precisa
+        if (poloSelecionado.pol_address_number) {
+            enderecoCompleto += ', ' + poloSelecionado.pol_address_number;
         }
-    });
+        if (poloSelecionado.pol_address_complement) { 
+            enderecoCompleto += ' - ' + poloSelecionado.pol_address_complement;
+        }
+        if (poloSelecionado.pol_district) { 
+            enderecoCompleto += ', ' + poloSelecionado.pol_district;
+        }
+        if (poloSelecionado.pol_city) {
+            enderecoCompleto += ' - ' + poloSelecionado.pol_city;
+        }
+        document.getElementById('Endereco_do_Polo').value = enderecoCompleto;
+    } else {
+        document.getElementById('Email').value = '';
+        document.getElementById('Nome_do_Responsavel_pelo_Polo').value = '';
+        document.getElementById('Telefone_do_Responsavel_pelo_Polo').value = '';
+        document.getElementById('Email_do_Responsavel_pelo_Polo').value = '';
+        document.getElementById('Nome_e_Numero_do_Polo').value = '';
+        document.getElementById('CEP_do_Polo').value = ''; 
+        document.getElementById('CNPJ_do_Polo').value = '';
+        document.getElementById('Endereco_do_Polo').value = '';
+    }
+});
 });
 
 // --- Lógica de envio do formulário ---
