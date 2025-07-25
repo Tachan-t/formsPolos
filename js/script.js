@@ -347,9 +347,26 @@ const listasEquipamentosPorCursoESemestre = {
             " 1 Kit Medição, Segurança e Eficiência Energética",
         ],
         '4_semestre': [
-            "1 Impressora 3d Creality Ender 3 V2"
+            "1 Impressora 3d Creality Ender 3 V3 Se-1001020508",
+            "1 Manômetro",
+            "2 Mangueira transparente",
         ],
 
+        '5_semestre': [
+            "1 kit topografia e Levantamento Planialtimétrico (kit Nivel Óptico Automático 32x + Mira 4m + Tripé Topografia",
+            "1 Kit Eletrônica e Circuitos Básicos",
+            "1 Kit Solos",
+        ],
+        '6_semestre': [
+            "1 kit instalações Elétricas e Projetos Prediais",
+            "1 Kit Concretagem",
+            "1 Colher de pedreiro",
+            "1 Balde plástico",
+            "1 Martelo de Borracha"
+        ],
+        '7_semestre': [
+            "1 Kit Máquinas Elétricas e Acionamentos"
+        ],
     },
 
 };
