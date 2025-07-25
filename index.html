@@ -19,8 +19,68 @@
             <p>Após a liberação do espaço físico, para receber os insumos e capacitação de tutores para aulas práticas, os polos devem ter, no mínimo, 20 alunos matriculados no mesmo semestre para iniciar uma turma.</p>
             <p>A indicação de tutores é atribuição dos polos e a não indicação dentro do prazo estipulado implicará na não realização das aulas.</p>
 
+             <fieldset>
+                <legend>Infraestrutura Mínima</legend>
+                <p>Para viabilizar a realização de atividades práticas obrigatórias dos cursos da área da saúde ofertados na modalidade semipresencial, o polo deve dispor de um Laboratório Multidisciplinar da Saúde que atenda aos seguintes requisitos mínimos de infraestrutura:</p>
+                
+                <h4>Espaço físico adequado</h4>
+                <p>O laboratório deve possuir metragem compatível com a realização de práticas seguras, com capacidade para acomodar, simultaneamente, no mínimo 10 estudantes, garantindo circulação, conforto e visibilidade adequada para supervisão docente.</p>
+
+                <h4>Bancadas técnicas</h4>
+                <p>É obrigatória a presença de pelo menos uma bancada principal com superfície em pedra ou inox, com dimensões mínimas de 5,00 m x 1,20 m, destinada à manipulação de reagentes e execução dos procedimentos.</p>
+                <p>Deve haver ainda uma bancada auxiliar com dimensão mínima de 1,00 m x 1,00 m para disposição de materiais de apoio. Bancadas em madeira ou materiais porosos não são permitidas.</p>
+
+                <h4>Pia com água corrente</h4>
+                <p>O laboratório deve contar com pia funcional com água corrente, essencial para higienização de materiais, das mãos e descarte seguro de resíduos líquidos, conforme normas de biossegurança.</p>
+
+                <h4>Ventilação e iluminação</h4>
+                <p>O ambiente deve ser bem ventilado, com janelas ou sistema de ventilação forçada, e possuir iluminação adequada, natural e/ou artificial, que permita a execução segura e eficiente das práticas laboratoriais.</p>
+
+                <h4>Mobiliário apropriado</h4>
+                <p>Devem ser disponibilizados 10 bancos individuais rígidos, de material lavável e não estofado. Cadeiras com encosto ou bancos estofados não são permitidos, por não atenderem aos critérios de higiene e ergonomia laboratorial.</p>
+
+                <h4>Rede elétrica funcional</h4>
+                <p>É imprescindível a presença de tomadas e rede elétrica em pleno funcionamento, distribuídas de forma segura ao longo do ambiente, possibilitando o uso de equipamentos e instrumentos laboratoriais.</p>
+
+                <h4>Equipamento de refrigeração</h4>
+                <p>O laboratório deve dispor de um frigobar ou geladeira exclusivo para uso laboratorial, destinado ao armazenamento de reagentes, amostras e materiais que requerem conservação sob refrigeração.</p>
+            
+            <fieldset class="modern-fieldset">
+            <legend>Estrutura para Aulas</legend>
+
+            <p>Você utilizará estrutura própria para realização das aulas ou fará aula em parceria com estabelecimentos de saúde?</p>
+            <div class="radio-group">
+                <input type="radio" id="estruturaPropria" name="Estrutura ou Parceria" value="Estrutura Propria" required>
+                <label for="estruturaPropria">Vou utilizar estrutura própria</label><br>
+
+                <input type="radio" id="estruturaParceria" name="Estrutura ou Parceria" value="Parceria com Estabelecimento de Saude">
+                <label for="estruturaParceria">Farei aula em parceria com estabelecimentos de saúde</label>
+            </div>
+            <div id="parceriaFields" style="display: none; margin-top: 20px;">
+                <div class="input-group">
+                    <label for="Link_Contrato_de_Parceria">Se você assinalou "parceria", por favor, adicione o LINK do contrato de parceria (ex: link do Google Drive/Dropbox):</label>
+                    <input type="url" id="Link_Contrato_de_Parceria" name="Link Contrato de Parceria" placeholder="https://exemplo.com/contrato.pdf">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="Link_Foto_Video_Laboratorio_1">Adicione o LINK da Foto/Vídeo do laboratório (URL 1):</label>
+                <input type="url" id="Link_Foto_Video_Laboratorio_1" name="Link Foto Video Laboratorio 1" placeholder="https://exemplo.com/foto1.jpg" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Link_Foto_Video_Laboratorio_2">Adicione o LINK da Foto/Vídeo do laboratório (URL 2):</label>
+                <input type="url" id="Link_Foto_Video_Laboratorio_2" name="Link Foto Video Laboratorio 2" placeholder="https://exemplo.com/foto2.jpg">
+            </div>
+        </fieldset>
+            </fieldset>
+
+            
             <fieldset>
-                <legend>Infraestrutura Mínima para Aulas Práticas</legend>
+               
+
+            <fieldset>
+                <legend>Equipamentos necessários</legend>
                 
                 <label for="selecionarCurso">Selecione o Curso para visualizar a Infraestrutura Mínima:</label>
                 <select id="selecionarCurso" name="Curso Selecionado">
@@ -45,43 +105,18 @@
                 </div>
                 
                 <p style="margin-top: 25px;">Ao preencher esse formulário, o polo está ciente de que a infraestrutura mínima para a realização da aulas práticas do curso selecionado, compreende:</p>
+                <label class="checkbox-container" style="margin-top: 25px;">
+                <input type="checkbox" id="Ciente_Equipamentos" name="Ciente Equipamentos" value="Sim" required>
+                Declaro que estou ciente dos equipamentos e materiais necessários para oferta do curso em cada semestre. Ao submeter o formulário para avaliação e liberação do polo, comprometo-me a apresentar (com 60 dias antes do início do semestre), os equipamentos necessários para o semestre seguinte. Para fins de liberação serão autorizados polos que apresentarem equipamentos necessários para o 1° semestre do curso.
+                <span class="checkmark"></span>
+            </label>
+            
+                    
 
-                
-                <p class="attention-note"><strong>Atenção:</strong> Não serão aceitos espaços de cozinha, espaços com cortinas, sofás ou com outros materiais que possam levar ao risco de contaminação cruzada. As fotos precisam demonstrar um espaço apto para receber 10 alunos (no mínimo) e atender todos os requisitos acima citados.</p>
             </fieldset>
-
-            <fieldset>
-                <legend>Laboratório Multidisciplinar da Saúde</legend>
-                <p>Para viabilizar a realização de atividades práticas obrigatórias dos cursos da área da saúde ofertados na modalidade semipresencial, o polo deve dispor de um Laboratório Multidisciplinar da Saúde que atenda aos seguintes requisitos mínimos de infraestrutura:</p>
-                
-                <h4>Espaço físico adequado</h4>
-                <p>O laboratório deve possuir metragem compatível com a realização de práticas seguras, com capacidade para acomodar, simultaneamente, no mínimo 10 estudantes, garantindo circulação, conforto e visibilidade adequada para supervisão docente.</p>
-
-                <h4>Bancadas técnicas</h4>
-                <p>É obrigatória a presença de pelo menos uma bancada principal com superfície em pedra ou inox, com dimensões mínimas de 5,00 m x 1,20 m, destinada à manipulação de reagentes e execução dos procedimentos.</p>
-                <p>Deve haver ainda uma bancada auxiliar com dimensão mínima de 1,00 m x 1,00 m para disposição de materiais de apoio. Bancadas em madeira ou materiais porosos não são permitidas.</p>
-
-                <h4>Pia com água corrente</h4>
-                <p>O laboratório deve contar com pia funcional com água corrente, essencial para higienização de materiais, das mãos e descarte seguro de resíduos líquidos, conforme normas de biossegurança.</p>
-
-                <h4>Ventilação e iluminação</h4>
-                <p>O ambiente deve ser bem ventilado, com janelas ou sistema de ventilação forçada, e possuir iluminação adequada, natural e/ou artificial, que permita a execução segura e eficiente das práticas laboratoriais.</p>
-
-                <h4>Mobiliário apropriado</h4>
-                <p>Devem ser disponibilizados 10 bancos individuais rígidos, de material lavável e não estofado. Cadeiras com encosto ou bancos estofados não são permitidos, por não atenderem aos critérios de higiene e ergonomia laboratorial.</p>
-
-                <h4>Rede elétrica funcional</h4>
-                <p>É imprescindível a presença de tomadas e rede elétrica em pleno funcionamento, distribuídas de forma segura ao longo do ambiente, possibilitando o uso de equipamentos e instrumentos laboratoriais.</p>
-
-                <h4>Equipamento de refrigeração</h4>
-                <p>O laboratório deve dispor de um frigobar ou geladeira exclusivo para uso laboratorial, destinado ao armazenamento de reagentes, amostras e materiais que requerem conservação sob refrigeração.</p>
+                <p class="attention-note"><strong>Atenção:</strong> Não serão aceitos espaços de cozinha, espaços com cortinas, sofás ou com outros materiais que possam levar ao risco de contaminação cruzada. As fotos precisam demonstrar um espaço apto para receber 10 alunos (no mínimo) e atender todos os requisitos acima citados. Após o preenchimento do formulário, o comprovante de preenchimento deverá ser encaminhado para o e-mail <strong>juliana.sanchez@fecaf.com.br</strong>. O prazo para liberação do polo é de 10 dias úteis.</p>
             </fieldset>
-            <fieldset>
-                <legend>Informações Pós-Preenchimento</legend>
-                <p>Após o preenchimento do formulário, o comprovante de preenchimento deverá ser encaminhado para o e-mail <strong>juliana.sanchez@fecaf.com.br</strong>. O prazo para liberação do polo é de 10 dias úteis.</p>
-            </fieldset>
-        </div>
-
+           
         <fieldset class="modern-fieldset">
             <legend>Seleção de Polo</legend>
             <label for="selecionarPolo">Selecione o Polo:</label>
@@ -135,35 +170,7 @@
             </div>
         </fieldset>
 
-        <fieldset class="modern-fieldset">
-            <legend>Estrutura para Aulas</legend>
 
-            <p>Você utilizará estrutura própria para realização das aulas ou fará aula em parceria com estabelecimentos de saúde?</p>
-            <div class="radio-group">
-                <input type="radio" id="estruturaPropria" name="Estrutura ou Parceria" value="Estrutura Propria" required>
-                <label for="estruturaPropria">Vou utilizar estrutura própria</label><br>
-
-                <input type="radio" id="estruturaParceria" name="Estrutura ou Parceria" value="Parceria com Estabelecimento de Saude">
-                <label for="estruturaParceria">Farei aula em parceria com estabelecimentos de saúde</label>
-            </div>
-
-            <div id="parceriaFields" style="display: none; margin-top: 20px;">
-                <div class="input-group">
-                    <label for="Link_Contrato_de_Parceria">Se você assinalou "parceria", por favor, adicione o LINK do contrato de parceria (ex: link do Google Drive/Dropbox):</label>
-                    <input type="url" id="Link_Contrato_de_Parceria" name="Link Contrato de Parceria" placeholder="https://exemplo.com/contrato.pdf">
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label for="Link_Foto_Video_Laboratorio_1">Adicione o LINK da Foto/Vídeo do laboratório (URL 1):</label>
-                <input type="url" id="Link_Foto_Video_Laboratorio_1" name="Link Foto Video Laboratorio 1" placeholder="https://exemplo.com/foto1.jpg" required>
-            </div>
-
-            <div class="input-group">
-                <label for="Link_Foto_Video_Laboratorio_2">Adicione o LINK da Foto/Vídeo do laboratório (URL 2):</label>
-                <input type="url" id="Link_Foto_Video_Laboratorio_2" name="Link Foto Video Laboratorio 2" placeholder="https://exemplo.com/foto2.jpg">
-            </div>
-        </fieldset>
 
         <fieldset class="modern-fieldset">
             <legend>Confirmações Finais</legend>
