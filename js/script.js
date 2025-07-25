@@ -584,7 +584,8 @@ selectPolo.addEventListener('change', function() {
         document.getElementById('Email_do_Responsavel_pelo_Polo').value = poloSelecionado[mapeamentoCampos['Email do Responsavel pelo Polo']] || '';
         document.getElementById('Nome_e_Numero_do_Polo').value = poloSelecionado[mapeamentoCampos['Nome e Numero do Polo']] || '';
         // Preenche o campo de CEP com a chave correta da API
-        document.getElementById('CEP_do_Polo').value = poloSelecionado[mapeamentoCampos['CEP do Polo']] || '';
+        // Preenche o campo de CEP com a chave correta da API
+document.getElementById('CEP_do_Polo').value = poloSelecionado[mapeamentoCampos['CEP do Polo']] || '';
         document.getElementById('CNPJ_do_Polo').value = poloSelecionado[mapeamentoCampos['CNPJ do Polo']] || '';
         
         let enderecoCompleto = poloSelecionado[mapeamentoCampos['Endereco do Polo']] || '';
