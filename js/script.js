@@ -367,7 +367,34 @@ const listasEquipamentosPorCursoESemestre = {
         '7_semestre': [
             "1 Kit Máquinas Elétricas e Acionamentos"
         ],
+        '8_semestre': [
+            "1 Kit Automação, CLP e Programação",
+            "1 Kit Logística e Cadeia de Suprimentos",
+            "1 Kit Kit Qualidade e Produtividade"
+        ],
     },
+    pedagogia: {
+        '1_semestre': [
+            "1 Material Dourado (Completo)",
+            "1 Escala Cuisenaire",
+            "1 Blocos Lógicos",
+            "1 Dominó de Fração",
+            "1 Dominó de Multiplicação",
+            "1 Dominó de Alfabetização em Libras",
+            "1 Dominó de Alfabetização",
+            "1 Ábaco de Madeira",
+            "1 Jogos de Tabuleiro",
+            "1 Letras Móveis",
+            "1 Jogo da Memória",
+            "1 Caixa de Giz de Cera",
+            "1 Caixa de Lápis de Cor",
+            "1 Resma de Folhas Coloridas",
+            "1 Caixa de Tesouras",
+            "1 Caixa de Colas com 12 unidades",
+            "4 Caixa de Guaches com 6 unidades",
+            "2 Kit de 12 Pincéis",
+        ],
+    }
 
 };
 
