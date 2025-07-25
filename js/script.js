@@ -328,7 +328,30 @@ const listasEquipamentosPorCursoESemestre = {
             "1 Aparelho de Microcorrente",
             "1 Aparelho de Ultrassom"
         ],
-    }
+    },
+    arquiteturaEEngenharia: {
+        '1_semestre': [
+            "6 Prancheta Desenho Portátil Trident A3",
+            "2 Trena fita de açõ 5m",
+            "2 Trena Laser",
+            "2 Kit Geométrico Mdf 5 peças - Compasso Esquadro Transferidor",
+            "10 Especificações de computador (atende todos os cursos):- Processador: Intel Core i5 10ª geração ou superior ou equivalente AMD Ryzen 5 4000 Series ou superior, Memória RAM: 16 GB, Armazenamento: SSD de 512 GB ou superior, Placa de vídeo dedicada: NVIDIA GTX 1650 4GB ou superior (GTX 1050 Ti no mínimo), Tela: Full HD (1920x1080), 15.6 ou maior, IPS preferencial, Sistema operacional: Windows 10 ou 11",
+        ],
+        '2_semestre': [
+            "1 Kit de Física - Conjunto Básico para Fisíca Experimental",
+            " Kit de Física - Funções, Gráficos, Erros e Medidas"
+        ],
+        '3_semestre': [
+            " 1 kit de Física - Funções, Gráficos, Erros e Medidas",
+            " 1 kit de Física - Laboratório Didático de Eletricidade",
+            " 1 Kit Medição, Segurança e Eficiência Energética",
+        ],
+        '4_semestre': [
+            "1 Impressora 3d Creality Ender 3 V2"
+        ],
+
+    },
+
 };
 
 // >>>>>>>>>>>>> FUNÇÃO AUXILIAR PARA FORMATAR NOME DO SEMESTRE <<<<<<<<<<<<<
