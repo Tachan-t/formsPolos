@@ -1,0 +1,531 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: var(--dark-grey);
+    font-size: 16px; /* Tamanho da fonte base ajustado para melhor consistência */
+}
+
+:root {
+    /* Cores */
+    --primary-color: #007bff; /* Azul vibrante para ações e destaque */
+    --primary-dark-color: #0056b3; /* Azul mais escuro para hover */
+    --secondary-color: #6c757d; /* Cinza para texto secundário */
+    --light-grey: #f8f9fa; /* Cinza muito claro para fundos sutis */
+    --medium-grey: #e9ecef; /* Cinza médio para bordas e separadores */
+    --dark-grey: #343a40; /* Cinza escuro para títulos e textos principais */
+    --white: #ffffff;
+    --success-bg: #d4edda;
+    --success-text: #155724;
+    --error-bg: #f8d7da;
+    --error-text: #721c24;
+    --warning-bg: #fff3cd;
+    --warning-text: #856404;
+    --important-note-bg: #fce8e8;
+    --important-note-text: #922020;
+
+    /* Sombras */
+    --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 6px 18px rgba(0, 0, 0, 0.15);
+
+    /* Bordas */
+    --border-radius: 8px; /* Ajustado para um arredondamento mais sutil e moderno, 40px era muito */
+    --input-border: 1px solid var(--medium-grey);
+}
+
+form {
+    background-color: var(--white);
+    max-width: 990px;
+    width: 95%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    border: 1px solid var(--medium-grey);
+    overflow: hidden;
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Cabeçalho do Formulário com Background */
+.form-header {
+    background-image: url('Cabecalho-Doc-Abertura-da-Jornada-2024.1.png'); /* Caminho do banner */
+    background-size: cover;
+    background-position: center;
+    min-height: 180px;
+    padding: 25px 30px;
+    color: var(--white);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    margin-bottom: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+/* Adiciona um overlay sutil ao header para melhorar a legibilidade do texto */
+.form-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Overlay escuro sutil */
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    z-index: -1; /* Coloca o overlay abaixo do conteúdo */
+}
+
+.form-header h2 {
+    color: var(--white);
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 1.6em;
+    text-align: left;
+    width: 100%;
+    line-height: 1.2;
+    word-wrap: break-word;
+    white-space: normal;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Estilos para a Logo */
+.logo-container {
+    text-align: left;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+/* Padding lateral para seções internas do formulário */
+.intro-section,
+fieldset,
+#feedbackMessage,
+button {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: calc(100% - 60px);
+    box-sizing: border-box;
+}
+
+/* Ajustes de margens e bordas */
+.intro-section {
+    padding-top: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+fieldset {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border: 1px solid var(--medium-grey);
+    border-radius: var(--border-radius);
+    position: relative;
+    background-color: var(--white);
+    box-shadow: var(--shadow-light);
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 10px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-left: -10px;
+    position: relative;
+    z-index: 1;
+    background-color: var(--white);
+    display: table;
+    border-bottom: none;
+}
+
+/* Estilos para input-group */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-grey);
+    font-size: 0.95em;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="url"],
+.input-group textarea,
+select { /* Aplica a todos os selects e inputs de texto/email/url/textarea */
+    width: 100%;
+    padding: 12px 15px;
+    border: var(--input-border);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    font-size: 16px;
+    color: var(--dark-grey);
+    background-color: var(--white);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="url"]:focus,
+.input-group textarea:focus,
+select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25), inset 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Estilos específicos para o select customizado (seta) */
+select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23007bff'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+}
+
+.radio-group {
+    margin-bottom: 20px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+}
+
+.radio-group label {
+    display: inline-block;
+    font-weight: normal;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    width: calc(100% - 60px);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    margin: 30px 30px;
+}
+
+button:hover {
+    background-color: var(--primary-dark-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+#feedbackMessage {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+    display: none;
+    box-shadow: var(--shadow-light);
+    font-size: 1.05em;
+    margin-bottom: 25px;
+}
+
+/* Estilos para a seção introdutória */
+.intro-section {
+    margin-bottom: 30px;
+    padding-top: 20px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.intro-section p {
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 1em;
+}
+
+.intro-section .important-note {
+    background-color: var(--important-note-bg);
+    color: var(--important-note-text);
+    border: 1px solid #d9534f;
+    border-radius: var(--border-radius);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+/* Estilos para a seção de infraestrutura (details/summary) */
+details {
+    border: 1px solid var(--medium-grey); /* Usando var */
+    border-radius: var(--border-radius);
+    padding: 15px 20px;
+    margin-top: 15px;
+    background-color: var(--light-grey); /* Usando var */
+    transition: background-color 0.3s ease;
+}
+
+details[open] {
+    background-color: var(--white); /* Usando var */
+    box-shadow: var(--shadow-light);
+}
+
+summary {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 0;
+    color: var(--primary-color);
+    font-size: 1.1em;
+    outline: none;
+    list-style: none;
+    position: relative;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: '+';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+    content: '-';
+    transform: translateY(-50%) rotate(0deg);
+}
+
+details ol {
+    margin-top: 15px;
+    padding-left: 30px;
+    list-style-type: decimal;
+    color: var(--secondary-color);
+}
+
+details ol li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.attention-note {
+    background-color: var(--warning-bg);
+    color: var(--warning-text);
+    border: 1px solid #ffeeba;
+    border-radius: var(--border-radius);
+    padding: 15px 20px;
+    margin-top: 25px;
+    font-weight: 600;
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+/* Estilos para o checkbox customizado */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--dark-grey);
+    font-weight: normal;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: var(--medium-grey);
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #d8e0e7;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid var(--white);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form {
+        width: 98%;
+        margin: 10px auto;
+    }
+    
+    .form-header {
+        padding: 15px 20px;
+        min-height: 120px;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
+    .form-header h2 {
+        font-size: 1.4em; /* Título menor em mobile */
+        margin-top: 10px; /* Margem menor em mobile */
+    }
+
+    /* Ajusta paddings e margens para telas menores */
+    .intro-section,
+    fieldset,
+    #feedbackMessage,
+    button {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: calc(100% - 40px);
+    }
+    
+    fieldset {
+        padding: 15px 20px;
+        padding-top: 25px; /* Ajusta padding-top para telas menores */
+        margin: 20px 20px;
+    }
+
+    legend {
+        font-size: 1.1em;
+        margin-left: -5px;
+        margin-bottom: 10px;
+    }
+
+    .input-group label {
+        font-size: 0.9em;
+    }
+
+    .input-group input[type="text"],
+    .input-group input[type="email"],
+    .input-group input[type="url"],
+    .input-group textarea,
+    select {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 15px 25px;
+        font-size: 1em;
+        width: calc(100% - 40px);
+        margin: 20px 20px;
+    }
+
+    #feedbackMessage {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+
+    .intro-section p,
+    .intro-section .important-note,
+    .attention-note {
+        font-size: 0.95em;
+    }
+
+    details {
+        padding: 12px 15px;
+    }
+
+    summary {
+        font-size: 1em;
+    }
+
+    .checkbox-container {
+        font-size: 0.95em;
+        padding-left: 30px;
+    }
+
+    .checkmark {
+        height: 20px;
+        width: 20px;
+    }
+
+    .checkbox-container .checkmark:after {
+        left: 7px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border-width: 0 2px 2px 0;
+    }
+}
