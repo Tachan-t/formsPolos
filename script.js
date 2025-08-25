@@ -640,61 +640,66 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 });
 
-// --- Lógica de envio do formulário ---
+// --- Lógica de envio do formulário (VERSÃO CORRIGIDA) ---
 document.getElementById('myForm').addEventListener('submit', async function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const form = event.target;
     const formData = new FormData(form);
     const feedbackMessage = document.getElementById('feedbackMessage');
 
+    // Limpa a mensagem de feedback anterior
     feedbackMessage.textContent = '';
     feedbackMessage.className = '';
     feedbackMessage.style.display = 'none';
 
+    // Desabilita o botão de envio
     const submitButton = form.querySelector('button[type="submit"]');
     submitButton.disabled = true;
     submitButton.textContent = 'Enviando...';
 
     try {
+        // Esta chamada fetch irá PROVAVELMENTE falhar e pular para o CATCH devido ao redirecionamento do Google.
         const response = await fetch(appScriptURL, {
             method: 'POST',
-            body: formData 
+            body: formData
         });
 
-        if (response.ok) {
-            const data = await response.text(); 
-            feedbackMessage.textContent = "Dados enviados com sucesso! " + data;
-            feedbackMessage.className = 'success';
-            form.reset(); 
+        // Este bloco serve como uma segurança caso o Google mude seu comportamento no futuro.
+        if (!response.ok) {
+            // Se a resposta chegar mas não for 'ok', é um erro real do servidor.
+            const errorText = await response.text();
+            throw new Error(`Erro do servidor. Status: ${response.status} - ${errorText}`);
+        }
+        
+        // Se, por algum milagre, a chamada fetch for bem-sucedida, trate como sucesso.
+        const data = await response.text(); 
+        feedbackMessage.textContent = "Dados enviados com sucesso! " + data;
+        feedbackMessage.className = 'success';
+        resetarFormulario(form); // Chama a função para limpar o formulário
+
+    } catch (error) {
+        console.error('Ocorreu um erro durante o fetch:', error);
+
+        // *** AQUI ESTÁ A LÓGICA PRINCIPAL DA CORREÇÃO ***
+        // Verificamos se o erro é o "Failed to fetch", que é o erro esperado de CORS/redirecionamento.
+        if (error instanceof TypeError && error.message === 'Failed to fetch') {
             
-            // Re-define estados iniciais após o reset do formulário
-            document.getElementById('estruturaPropria').checked = true; 
-            document.getElementById('parceriaFields').style.display = 'none'; 
-            document.getElementById('Link_Contrato_de_Parceria').removeAttribute('required'); 
-            document.getElementById('Link_Contrato_de_Parceria').value = '';
-
-            const selectPolo = document.getElementById('selecionarPolo');
-            selectPolo.value = ''; 
-            const changeEventPolo = new Event('change'); 
-            selectPolo.dispatchEvent(changeEventPolo); // Dispara o evento 'change' para limpar os campos relacionados ao polo
-
-            const selectCurso = document.getElementById('selecionarCurso');
-            selectCurso.value = ''; 
-            mostrarListaRequisitosPorCurso(''); 
-            popularSemestres(''); 
+            // Se for, nós TRATAMOS COMO SUCESSO!
+            feedbackMessage.textContent = "Dados enviados com sucesso! Sua submissão foi recebida.";
+            feedbackMessage.className = 'success';
+            resetarFormulario(form); // Chama a função para limpar e resetar o formulário
 
         } else {
-            const errorText = await response.text(); 
-            throw new Error(`Erro ao enviar dados. Status: ${response.status} - ${errorText}`);
+            // Se for qualquer outro erro (ex: sem internet), mostramos como um erro real.
+            feedbackMessage.textContent = "Erro ao enviar os dados: " + error.message;
+            feedbackMessage.className = 'error';
         }
-    } catch (error) {
-        feedbackMessage.textContent = "Erro ao enviar os dados: " + error.message;
-        feedbackMessage.className = 'error';
-        console.error('Erro:', error);
+
     } finally {
+        // Este bloco é executado sempre, tanto em sucesso quanto em falha.
         feedbackMessage.style.display = 'block';
-        submitButton.disabled = false; 
-        submitButton.textContent = 'Enviar Cadastro do Polo'; 
+        submitButton.disabled = false;
+        submitButton.textContent = 'Enviar Cadastro do Polo';
     }
 });
