@@ -8,7 +8,7 @@
 // Você obteve este URL no Passo 3 da configuração do Apps Script.
 // Exemplo: 'https://script.google.com/macros/s/AKfycBx.../exec'
 // *******************************************************************
-const appScriptURL = 'https://script.google.com/macros/s/AKfycbxG9_8_zZQYxCKYlDUIrom3s2XZMqd5kKAZ5UrWMBtkbOBRIP02f6TXkFSroruLWFKv6A/exec'; 
+const appScriptURL = 'https://script.google.com/macros/s/AKfycbwasH-mqvZNfr8IFfuXsXHAeMnCDOeanU_CkRyjzTg_hcgrsYV7hewDZ_g3SmaR7u6rGA/exec'; 
 
 // URL da API de polos
 const API_POLOS_URL = 'https://api-polos.unifecaf.edu.br/api/v1/routine/polosativoscomsupervisores';
