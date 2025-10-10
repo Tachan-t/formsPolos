@@ -518,7 +518,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 selectPolo.innerHTML = '<option value="">Nenhum polo ativo encontrado.</option>';
                 console.warn('API retornou uma lista vazia de polos.');
             } else {
-                selectPolo.innerHTML = '<option value="">-- Selecione um Polo --</option>'; 
+                selectPolo.innerHTML = '<option value=""> Selecione aqui </option>'; 
                 listaPolos.forEach((polo, index) => {
                     // Verifique se os campos essenciais para a option existem
                     if (polo.pol_name && polo.pol_mentor_id_reference) { 
