@@ -11,7 +11,7 @@
 const appScriptURL = 'https://script.google.com/macros/s/AKfycbzMDyIhd3pwBYUKONtZRVY8dGiicyKBmaldrq0KlxA3F5UMSAf_J46AOwDDzoXTXXr84w/exec'; 
 
 // URL da API de polos
-const API_POLOS_URL = 'https://api-polos.unifecaf.edu.br/api/v1/routine/polosativoscomsupervisores';
+const API_POLOS_URL = 'https://api-polos.unifecaf.edu.br/api/v1/routine/unidadesativascomsupervisores';
 
 let listaPolos = []; // Para armazenar os dados dos polos da API
 
