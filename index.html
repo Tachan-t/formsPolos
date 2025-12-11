@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro de Polo</title>
     <link rel="stylesheet" href="style.css">
-    <link real="icon" type="image/x-icon" href="/mages.jpeg">
+    <link rel="icon" type="image/x-icon" href="favicon.PNG">
 </head>
 <body>
+    
+<div class="form-inner">
     <form id="myForm">
+        
         <div class="form-header">
             <div class="logo-container">
                 </div>
+                
         </div>
         
         <div class="intro-section">
@@ -19,6 +23,18 @@
             <p class="important-note">O não preenchimento do formulário (que deverá ser renovado anualmente) ou o não atendimento das normas estabelecidas para o desenvolvimento dos laboratórios implicará em restrição da oferta do curso.</p>
             <p>Após a liberação do espaço físico, para receber os insumos e capacitação de tutores para aulas práticas, os polos devem ter, no mínimo, 15 alunos matriculados no mesmo semestre para iniciar uma turma.</p>
             <p>A indicação de tutores é atribuição dos polos e a não indicação dentro do prazo estipulado implicará na não realização das aulas.</p>
+
+            <div id="aviso-evidencias">
+    <p><strong>🟢 Orientações de como subir as evidências (fotos ao Drive):</strong></p>
+    <p>As fotos da estrutura devem estar no Google Drive, e o link da pasta deve ser enviado diretamente por este formulário.</p>
+    <p>
+        Acesse o passo a passo aqui:<br>
+        <a href="https://drive.google.com/file/d/13admaEeyNCuhAFC-iTdpmfqysRgJiSzd/view?usp=sharing" target="_blank">
+            https://drive.google.com/file/d/13admaEeyNCuhAFC-iTdpmfqysRgJiSzd/view?usp=sharing
+        </a>
+    </p>
+    </div>
+
 
            <fieldset>
                 <legend>Infraestrutura Mínima</legend>
@@ -87,27 +103,21 @@
                 <legend>Equipamentos necessários</legend>
                 
                 <label for="selecionarCurso">Selecione o Curso para visualizar a Infraestrutura Mínima:</label>
-                <select id="selecionarCurso" name="Curso Selecionado">
-                    <option value="">Selecione o Curso</option>
-                    <option value="biomedicina">Biomedicina</option>
-                    <option value="farmacia">Farmácia</option> 
-                    <option value="nutricao">Nutrição</option> 
-                    <option value="radiologia">Radiologia</option> 
-                    <option value="educacaoFisica">Educação Física</option> 
-                    <option value="fisioterapia">Fisioterapia</option> 
-                    <option value="terapiaOcupacional">Terapia Ocupacional</option> 
-                    <option value="arquiteturaEEngenharia">Arquitetura e Engenharia</option>
-                    <option value="esteticaCosmetica">Estética e Cosmeticos</option>
-                    <option value="pedagogia">Pedagogia</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="GestaoRecursosHumanos">Gestão de Recursos Humanos</option>
-                    <option value="logistica">Logística</option>
-                    <option value="gestaoComercial">Administração</option>
-                    <option value="gestaoFinanceira">Gestão Financeira</option>
-                    <option value="cienciasContabeis">Ciências Contábeis</option>
-                    <option value="GestaoDaTecnologiaDaInformacao">Gestão da Tecnologia da Informação</option>
-                    <option value="CienciaDaComputacao">Ciências da Computação</option>
-                    <option value="AnaliseEDesenvolvimentoDeSistemas">Análise e Desenvolvimento de Sistemas</option>
+                    <select id="selecionarCurso" name="Curso Selecionado">
+                        <option value="">Selecione o Curso</option>
+
+                        <!-- Novo modelo agrupado conforme pedido -->
+                        <option value="arquiteturaEEngenharias">Arquitetura e Engenharias</option>
+                        <option value="biomedicina|farmacia">Biomedicina | Farmácia</option>
+                        <option value="educacaoFisica">Educação Física (Bacharelado e Licenciatura)</option>
+                        <option value="esteticaCosmetica">Estética e Cosmética</option>
+                        <option value="fisioterapia|terapiaOcupacional">Fisioterapia | Terapia Ocupacional</option>
+                        <option value="nutricao">Nutrição</option>
+                        <option value="radiologia|servicoSocial">Radiologia | Serviço Social</option>
+                        <option value="pedagogia|psicopedagogia">Pedagogia | Psicopedagogia</option>
+
+                        <!-- opção para englobar todos os cursos -->
+                        <option value="todos">Todos os cursos</option>
                     </select>
 
                 <div id="semestreEquipamentosContainer" style="display: none; margin-top: 20px;">
@@ -165,7 +175,7 @@
             </div>
             </fieldset>
 
-<fieldset class="modern-fieldset">
+    <fieldset class="modern-fieldset">
     <legend>Dados do Polo</legend>
 
     <div class="input-group">
@@ -187,7 +197,7 @@
         <label for="Endereco_do_Polo">Qual o endereço completo do polo? (Importante para entrega de materiais)</label>
         <textarea id="Endereco_do_Polo" name="Endereco do Polo" rows="3" required></textarea>
     </div>
-</fieldset>
+    </fieldset>
 
         <fieldset class="modern-fieldset">
             <legend>Confirmações Finais</legend>
@@ -201,6 +211,7 @@
         </fieldset>
 
         <button type="submit" class="modern-button">Enviar Cadastro do Polo</button>
+</div>
     </form>
 
     <div id="feedbackMessage"></div>
