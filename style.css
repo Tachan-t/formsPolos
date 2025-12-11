@@ -476,3 +476,22 @@ form select { padding-right: 50px; }
     margin-right: 18px !important;
   }
 }
+
+/* ===== Correção do botão para alinhar com o restante do formulário ===== */
+.modern-button {
+  margin-left: 34px !important;     /* alinha com padding interno do form */
+  margin-right: 34px !important;    /* idem */
+  width: calc(100% - 68px) !important;  /* 100% - margens laterais */
+  box-sizing: border-box !important;
+  display: block;
+  padding: 16px 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .modern-button {
+    margin-left: 18px !important;
+    margin-right: 18px !important;
+    width: calc(100% - 36px) !important;
+  }
+}
