@@ -243,24 +243,27 @@ const listasEquipamentosPorCursoESemestre = {
     },
     arquiteturaEEngenharia: {
         '1_semestre': [
+            "Laboratório Multidisciplinar de Engenharia | Arquitetura (50m2)",
             "6 Prancheta Desenho Portátil Trident A3", "2 Trena fita de açõ 5m",
             "2 Trena Laser", "2 Kit Geométrico Mdf 5 peças - Compasso Esquadro Transferidor",
             "10 Especificações de computador (atende todos os cursos):- Processador: Intel Core i5 10ª geração ou superior ou equivalente AMD Ryzen 5 4000 Series ou superior, Memória RAM: 16 GB, Armazenamento: SSD de 512 GB ou superior, Placa de vídeo dedicada: NVIDIA GTX 1650 4GB ou superior (GTX 1050 Ti no mínimo), Tela: Full HD (1920x1080), 15.6 ou maior, IPS preferencial, Sistema operacional: Windows 10 ou 11"
         ],
-        '2_semestre': ["1 Kit de Física - Conjunto Básico para Fisíca Experimental", "Kit de Física - Funções, Gráficos, Erros e Medidas"],
+        '2_semestre': ["Laboratório Multidisciplinar de Engenharia | Arquitetura (50m2)","1 Kit de Física - Conjunto Básico para Fisíca Experimental", "Kit de Física - Funções, Gráficos, Erros e Medidas"],
         '3_semestre': [
+            "Laboratório Multidisciplinar de Engenharia | Arquitetura (50m2)",
             "1 kit de Física - Funções, Gráficos, Erros e Medidas",
             "1 kit de Física - Laboratório Didático de Eletricidade",
             "1 Kit Medição, Segurança e Eficiência Energética"
         ],
-        '4_semestre': ["1 Impressora 3d Creality Ender 3 V3 Se-1001020508", "1 Manômetro", "2 Mangueira transparente"],
+        '4_semestre': ["Laboratório Multidisciplinar de Engenharia | Arquitetura (50m2)","1 Impressora 3d Creality Ender 3 V3 Se-1001020508", "1 Manômetro", "2 Mangueira transparente"],
         '5_semestre': [
+            "Laboratório Multidisciplinar de Engenharia | Arquitetura (50m2)",
             "1 kit topografia e Levantamento Planialtimétrico (kit Nivel Óptico Automático 32x + Mira 4m + Tripé Topografia",
             "1 Kit Eletrônica e Circuitos Básicos", "1 Kit Solos"
         ],
-        '6_semestre': ["1 kit instalações Elétricas e Projetos Prediais", "1 Kit Concretagem", "1 Colher de pedreiro", "1 Balde plástico", "1 Martelo de Borracha"],
-        '7_semestre': ["1 Kit Máquinas Elétricas e Acionamentos"],
-        '8_semestre': ["1 Kit Automação, CLP e Programação", "1 Kit Logística e Cadeia de Suprimentos", "1 Kit Kit Qualidade e Produtividade"]
+        '6_semestre': ["Laboratório Multidisciplinar de Engenharia | Arquitetura (50m2)","1 kit instalações Elétricas e Projetos Prediais", "1 Kit Concretagem", "1 Colher de pedreiro", "1 Balde plástico", "1 Martelo de Borracha"],
+        '7_semestre': ["Laboratório Multidisciplinar de Engenharia | Arquitetura (50m2)", "1 Kit Máquinas Elétricas e Acionamentos"],
+        '8_semestre': ["Laboratório Multidisciplinar de Engenharia | Arquitetura (50m2)","1 Kit Automação, CLP e Programação", "1 Kit Logística e Cadeia de Suprimentos", "1 Kit Kit Qualidade e Produtividade"]
     },
     pedagogia: {
         '1_semestre': [

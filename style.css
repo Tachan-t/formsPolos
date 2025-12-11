@@ -326,21 +326,35 @@ details ol li{ margin-bottom:8px; font-size:0.95rem }
 .modern-fieldset select{ max-width:100% }
 
 /* ---------------------------
-   Aviso evidence (Google Drive)
+   Aviso - Evidências (Drive)
    --------------------------- */
-#aviso-evidencias{
-  background: linear-gradient(180deg, rgba(27,166,87,0.06), rgba(255,255,255,0.01));
-  border:1px solid rgba(27,166,87,0.18);
-  padding:14px 16px;
-  border-radius:8px;
-  margin: 12px 34px;
-  display:block;
-  color:var(--dark-grey);
+/* Aviso - Evidências (correção de alinhamento com o padding do form) */
+/* ===== Correção final: aviso-evidencias com mesma largura do important-note ===== */
+#aviso-evidencias {
+  /* aparência igual ao important-note */
+  background: #F1FAF4;            /* mesmo fundo */
+  color: var(--important-note-text);
+  border: 1px solid var(--important-note-border);                      /* mesma borda do important-note */
+  border-radius: calc(var(--radius) - 2px);
+
+  /* espaçamento / alinhamento — MESMO comportamento do important-note
+     34px = padding lateral que você está aplicando no form globalmente */
+  padding: 15px 20px !important;                  /* mesmo padding interno */
+  margin: 12px 34px 20px !important;              /* alinha lateralmente com outros cards */
+  
+  /* não deixar exceder e considerar padding/border no cálculo */
+  box-sizing: border-box !important;
+  max-width: calc(100% - 68px) !important;        /* 100% menos os 34px * 2 */
+  overflow: visible;
+
+  /* sombra/visibilidade */
   box-shadow: var(--shadow-light);
 }
-#aviso-evidencias p{ margin:8px 0; font-size:0.96rem }
-#aviso-evidencias p:first-child{ font-weight:700; color:var(--blue-1) }
-#aviso-evidencias a{ color:var(--blue-2); font-weight:700 }
+
+/* texto e estilo interno igual ao important-note */
+#aviso-evidencias p { margin: 6px 0; font-size: 0.96rem; color: var(--dark-grey); }
+#aviso-evidencias p:first-child { font-weight: 700; color: var(--blue-1); }
+#aviso-evidencias a { color: var(--blue-1); font-weight: 700; text-decoration: underline; }
 
 /* small helpers & utilities */
 .small-note{ font-size:0.92rem; color:var(--secondary-color) }
