@@ -127,6 +127,12 @@ const listasEquipamentosPorCursoESemestre = {
             "5 Frascos simulados de vacina (solução salina)","2 Modelos anatômicos com músculos deltoide"
         ]
     },
+
+    servicoSocial: {
+    'Todos os Semestres': [
+        "Não há requisitos específicos para este curso."
+    ]
+},
     nutricao: {
         '1_semestre': ["não há requisitos específicos para o 1º semestre"],
         '2_semestre': [
@@ -297,7 +303,9 @@ const opcaoParaKeys = {
     esteticaCosmetica: ['esteticaCosmetica'],
     'fisioterapia|terapiaOcupacional': ['fisioterapia', 'terapiaOcupacional'],
     nutricao: ['nutricao'],
-    'radiologia|servicoSocial': ['radiologia', 'servicoSocial'], // 'servicoSocial' só será usado se existir nessa lista
+    radiologia: ['radiologia'],
+servicoSocial: ['servicoSocial'],
+// 'servicoSocial' só será usado se existir nessa lista
     'pedagogia|psicopedagogia': ['pedagogia', 'psicopedagogia'],
     todos: [] // será substituída dinamicamente
 };
